@@ -1,7 +1,5 @@
 package si.codemonkee.relationsWithJavers.model;
 
-import org.hibernate.envers.Audited;
-
 import javax.persistence.*;
 
 @Entity
@@ -14,8 +12,7 @@ public class CommonPart {
 
     private String name;
 
-
-    @OneToOne(targetEntity = Pon.class, cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     private Pon pon;
 
     public CommonPart() {

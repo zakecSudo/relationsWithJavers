@@ -13,11 +13,6 @@ public class Pon {
 
     private String description;
 
-//    @JsonManagedReference
-//    @OneToMany(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "pon_id")
-//    private List<Person> persons;
-
     @OneToMany(
             orphanRemoval = true,
             cascade = CascadeType.ALL)

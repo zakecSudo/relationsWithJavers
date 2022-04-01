@@ -67,6 +67,6 @@ public class CommonPartController {
         CommonPart commonPart = commonPartRepository.findById(Long.valueOf(commonPartId)).get();
         dto.setId(commonPart.getId());
 
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        return new ResponseEntity<>(commonPartRepository.save(dto), HttpStatus.OK);
     }
 }

@@ -1,8 +1,5 @@
 package si.codemonkee.relationsWithJavers.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import org.hibernate.envers.Audited;
-
 import javax.persistence.*;
 
 @Entity
@@ -14,12 +11,11 @@ public class Person {
 
     private String name;
 
-    public Person() {
-    }
+    private String lastname;
 
-    public Person(Long id, String name) {
-        this.id = id;
-        this.name = name;
+    private String testName;
+
+    public Person() {
     }
 
     public Long getId() {
@@ -36,5 +32,21 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getTestName() {
+        return testName;
+    }
+
+    public void setTestName(String testName) {
+        this.testName = testName;
     }
 }
